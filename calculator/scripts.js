@@ -9,6 +9,7 @@ const eight = document.querySelector('.eight');
 const nine = document.querySelector('.nine');
 
 const output = document.querySelector('.output');
+const blank = document.querySelector('.blank');
 
     const buttons = [
         {
@@ -51,7 +52,8 @@ const output = document.querySelector('.output');
 
  for (let i = 0; i < buttons.length; i++) {
     buttons[i].domElement.addEventListener('click', function() {
-    output.innerHTML = buttons[i].value;
+        blank.innerHTML = "";
+        output.append(buttons[i].value);
 });
 }
 
