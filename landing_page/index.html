@@ -4,21 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome 🔢</title>
+    <link rel="stylesheet" href="styles.css">
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
     >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
+
+    <nav class="container-fluid">
         <li>
-            <ul>Welcome to my Calculator</ul>
+            <ul class="header">x + y = ...</ul>
         </li>
     </nav>
 
-    <div class="statement">
-        <h3>Preform whatever basic calculations you want, wether it be addition, multiplication, subtraction, or division. You can even find remainders and use π!</h3>
-        <button>Start Calculating!</button>
+    <div class="statement" class="container">
+        <h3>Preform whatever basic calculations you want, whether it be addition, multiplication, subtraction, or division. You can even find remainders and use π!</h3>
+        <a href="/calculator/index.html">
+            <button class="buttonOne">Start Calculating!</button>
+        </a>
     </div>
+
 </body>
 </html>
