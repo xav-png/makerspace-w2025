@@ -7,9 +7,17 @@ const six = document.querySelector('.six');
 const seven = document.querySelector('.seven');
 const eight = document.querySelector('.eight');
 const nine = document.querySelector('.nine');
+const pi = document.querySelector('.pi');
+const squareRoot = document.querySelector('.square-root');
+const modulo = document.querySelector('.modulo');
+const add = document.querySelector('.add');
+const subtract = document.querySelector('.subtract');
+const multiply = document.querySelector('.multiply');
+const divide = document.querySelector('.divide');
+const equal = document.querySelector('.equal');
 
-const output = document.querySelector('.output');
-const blank = document.querySelector('.blank');
+let output = document.querySelector('.output');
+let blank = document.querySelector('.blank');
 
     const buttons = [
         {
@@ -47,17 +55,52 @@ const blank = document.querySelector('.blank');
         {
             domElement: nine,
             value: 9
-        }
+        },
+            {
+        domElement: pi,
+        value: 3.14
+    },
+    {
+        domElement: squareRoot,
+        value: '√'
+    },
+    {
+        domElement: modulo,
+        value: '%'
+    },
+    {
+        domElement: add,
+        value: '+'
+    },
+    {
+        domElement: subtract,
+        value: '-'
+    },
+    {
+        domElement: multiply,
+        value: '×'
+    },
+    {
+        domElement: divide,
+        value: '÷'
+    },
+    {
+        domElement: equal,
+        value: '='
+    }
     ];
 
+let notes = '';
+
  for (let i = 0; i < buttons.length; i++) {
-    buttons[i].domElement.addEventListener('click', function() {
-        blank.innerHTML = "";
-        output.append(buttons[i].value);
-});
-}
+        buttons[i].domElement.addEventListener('click', function() {
+            blank.innerHTML = '';
+            notes += buttons[i].value;
+            output.textContent = notes;
+    });
+ }
 
 
-const pi = document.querySelector('.pi');
-const squareRoot = document.querySelector('.square-root');
-const modulo = document.querySelector('.modulo');
+function numbers() {
+
+};
