@@ -1,2 +1,2 @@
 # makerspace-w2025
-Small school project for a mobile-first web app
+Small school project. Can do simple calculations such as addition, subtraction, multiplication, division, and modulo.
