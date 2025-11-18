@@ -1,3 +1,5 @@
+const sound = new Audio('click.mp3');
+
 const one = document.querySelector('.one');
 const two = document.querySelector('.two');
 const three = document.querySelector('.three');
@@ -8,7 +10,6 @@ const seven = document.querySelector('.seven');
 const eight = document.querySelector('.eight');
 const nine = document.querySelector('.nine');
 const pi = document.querySelector('.pi');
-const squareRoot = document.querySelector('.square-root');
 const modulo = document.querySelector('.modulo');
 const add = document.querySelector('.add');
 const subtract = document.querySelector('.subtract');
@@ -61,32 +62,24 @@ let blank = document.querySelector('.blank');
         value: 3.14
     },
     {
-        domElement: squareRoot,
-        value: '√'
-    },
-    {
         domElement: modulo,
-        value: '%'
+        value: ' % '
     },
     {
         domElement: add,
-        value: '+'
+        value: ' + '
     },
     {
         domElement: subtract,
-        value: '-'
+        value: ' - '
     },
     {
         domElement: multiply,
-        value: '×'
+        value: ' * '
     },
     {
         domElement: divide,
-        value: '÷'
-    },
-    {
-        domElement: equal,
-        value: '='
+        value: ' / '
     }
     ];
 
@@ -97,10 +90,16 @@ let notes = '';
             blank.innerHTML = '';
             notes += buttons[i].value;
             output.textContent = notes;
+            sound.play();
     });
  }
 
+ function equals() {
+    equal.addEventListener('click', function() {
+        const result = eval(notes);
+        output.textContent = result;
+        sound.play();
+    });
+ }
 
-function numbers() {
-
-};
+ equals();
